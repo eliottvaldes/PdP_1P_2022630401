@@ -41,6 +41,7 @@ class Stack:
         Retorna True si la pila está vacía, False en caso contrario.
         """
         return len(self.stack) == 0
+
     def show(self):
         """
         Retorna toda la pila
@@ -68,3 +69,22 @@ def sort_stack(original_stack):
     # Devolver la pila ordenada
     return sorted_stack
 
+
+# PROBANDO LA IMPLEMENTACIÓN
+# Crear una nueva pila y agregar elementos desordenados
+stack = Stack()
+stack.push(3)
+stack.push(1)
+stack.push(4)
+stack.push(2)
+
+# Mostramos la pila original
+print(f'Pila original: {stack.show()}')
+
+# Ordenar la pila
+sorted_stack = sort_stack(stack)
+
+print(f'Pila ordenada:')
+# Mostrar los elementos de la pila ordenada
+while not sorted_stack.isEmpty():
+    print(sorted_stack.pop())  # Imprimirá: 4, 3, 2, 1
