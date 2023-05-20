@@ -60,3 +60,18 @@ def closest_pair(points):
 
     return closest_pair, min_distance
 
+
+
+# PROBANDO IMPLEMENTACIÓN
+# Generar 20 puntos aleatorios
+points = [Point3D(random.random(), random.random(), random.random()) for _ in range(20)]
+
+# Mostrar los puntos generados
+print("==========================================================")
+print(f'Puntos generados: { ", ".join(str(p) for p in points) }')
+print("\n==========================================================")
+
+# Encontrar el par de puntos más cercano
+pair, distance = closest_pair(points)
+
+print(f"\nEl par de puntos mas cercano es:\n{pair[0]} y {pair[1]}. \nCon una distancia de {distance}")
