@@ -5,6 +5,11 @@ INTEGRANTES:
 - Valdés Luis Eliot Fabián
 """
 
+"""
+OBJETIVO:
+Diseña e implementa una pila en la que adicionalmente a las operaciones push y pop, tengas una función min que proporcione el menor elemento en la pila.
+"""
+
 # Definir una clase para implementar una pila
 class MinStack:
 
@@ -49,3 +54,28 @@ class MinStack:
         """
         return self.min_stack[-1] if self.min_stack else None
 
+
+# PROBANDO LA IMPLEMENTACIÓN
+# Crear una nueva pila
+stack = MinStack()
+
+# Agregar elementos a la pila
+stack.push(5)
+stack.push(3)
+stack.push(7)
+stack.push(1)
+
+# Obtener el elemento mínimo
+print("El elemento minimo de la pila es: ")
+print(stack.getMin())  # Debería imprimir 1
+
+# Eliminar el último elemento (1 en este caso)
+stack.pop()
+
+# Obtener el elemento mínimo ahora
+print("El elemento minimo de la pila ahora es: ")
+print(stack.getMin())  # Debería imprimir 3
+
+# Obtener el último elemento (top) de la pila
+print("El ultimo elemento de la pila es: ")
+print(stack.top())  # Debería imprimir 7
