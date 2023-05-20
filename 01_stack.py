@@ -54,6 +54,12 @@ class MinStack:
         """
         return self.min_stack[-1] if self.min_stack else None
 
+    def show(self) -> None:
+        """
+        Retorna toda la pila
+        """
+        return self.stack
+
 
 # PROBANDO LA IMPLEMENTACIÓN
 # Crear una nueva pila
@@ -62,20 +68,22 @@ stack = MinStack()
 # Agregar elementos a la pila
 stack.push(5)
 stack.push(3)
+stack.push(4)
 stack.push(7)
 stack.push(1)
 
+# Obtener y mostrar toda la pila
+print(f'La pila inicial es: {stack.show()}')
+
 # Obtener el elemento mínimo
-print("El elemento minimo de la pila es: ")
-print(stack.getMin())  # Debería imprimir 1
+print(f'\nEl elemento menor de la pila es: {stack.getMin()}')  # Debería imprimir 1
 
 # Eliminar el último elemento (1 en este caso)
+print(f'\nEliminando el elemento menor de la pila... (1)')
 stack.pop()
 
 # Obtener el elemento mínimo ahora
-print("El elemento minimo de la pila ahora es: ")
-print(stack.getMin())  # Debería imprimir 3
+print(f'\nEl elemento menor de la pila ahora es: {stack.getMin()}')  # Debería imprimir 3
 
 # Obtener el último elemento (top) de la pila
-print("El ultimo elemento de la pila es: ")
-print(stack.top())  # Debería imprimir 7
+print(f'\nEl ultimo elemento de la pila es: {stack.top()}') # Debería imprimir 7
